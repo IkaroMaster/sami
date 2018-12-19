@@ -1,0 +1,53 @@
+
+<div class="row" >
+  
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" >
+      <div >
+          
+      
+          Nombre: <br>
+          <input class="form-control" type="text" #n >
+      
+          <br><br>
+      
+          Apellido: <br>
+          <input class="form-control" type="text" #a>
+      
+          <br><br>
+      
+          Direccion:<br>
+          <input class="form-control" type="text" #d >
+      
+           <br><br>
+           <button class="form-control" (click)="guardarContacto(n.value,a.value,d.value);">Guardar</button>
+        </div>
+      
+    
+  </div>
+  
+  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+    
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Direccion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of contactos">
+          <td>{{c.id}}</td>
+          <td><a href="">{{c.nombre}}</a></td>
+          <td>{{c.apellido}}</td>
+          <td>{{c.direccion}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  
+  
+</div>
